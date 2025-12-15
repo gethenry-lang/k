@@ -21,11 +21,18 @@
         box-sizing: border-box;
       }
 
-      body::before {
-  border: 20px solid rgba(1, 1, 1, 1); /* Orange mit Transparenz */
-  /* oder */
-  border: 20px solid #010101; /* Schwarz */
-}
+body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 20px solid #000000; /* NUR DIESE LINIE ÄNDERN - Schwarze Border */
+        pointer-events: none; /* Klicks gehen durch */
+        z-index: 10000; /* Über allem */
+        box-sizing: border-box;
+      }
       
       body::before {
         content: '';
@@ -4347,6 +4354,7 @@ bubble.onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 
