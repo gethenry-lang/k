@@ -26,14 +26,14 @@ html,body{margin:0;height:100%;font-family:Arial,Helvetica,sans-serif;background
 .front{transform:translateZ(15px)}.back{transform:translateZ(-15px) rotateY(180deg)}.left{transform:translateX(-15px) rotateY(-90deg)}.right{transform:translateX(15px) rotateY(90deg)}.top{transform:translateY(-15px) rotateX(90deg)}.bottom{transform:translateY(15px) rotateX(-90deg)}
 
 /* ---------- Story-Karte ---------- */
-#card{position:fixed;left:45%;top:48%;transform:translate(-50%,-50%);background:#000000;padding:25px 30px;box-shadow:0 6px 24px rgba(255, 255, 255, 0);border-radius:8px;width:80vw;max-height:125vh;overflow-y:auto;display:none;z-index:200; color: #e0e0e0;bottom: -45%;}
+#card{position:fixed;left:45%;top:48%;transform:translate(-50%,-50%);background:#000000;padding:25px 30px;box-shadow:0 6px 24px rgba(255, 255, 255, 0);border-radius:8px;width:75vw;max-height:125vh;overflow-y:auto;display:none;z-index:200; color: #e0e0e0;bottom: -45%;}
 #card h1{margin-top:0;font-size:.8e; color: #e0e0e0;}
 .close{float:right;border:none;background:none;font-size:28px;line-height:1;cursor:pointer;}
 
 /* ---------- VOKABELN ---------- */
 .voc{margin-top:60px;display:flex;flex-direction:column;gap:22px}   /* Abstand zwischen Blöcken */
 .word-group{display:flex;flex-direction:column;gap:4px}            /* untereinander */
-.word{position:relative;padding-left:32px;font-size:36px;line-height:1.3;}
+.word{position:relative;padding-left:32px;font-size:36px;line-height:1.2;}
 .word.de::before{content:"🇩🇪";position:absolute;left:0;top:0}
 .word.vi::before{content:"🇬🇧";position:absolute;left:0;top:0}
 .word.en::before{content:"vn";position:absolute;left:0;top:0}
@@ -4337,6 +4337,7 @@ document.addEventListener('touchend', function(event) {
 </script>
 </body>
 </html>
+
 
 
 
