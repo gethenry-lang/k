@@ -1,22 +1,52 @@
 <!doctype html>
-<html lang="de" style="border: 20px solid #ccc; box-sizing: border-box;">
+<html lang="de">
+  <head>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <meta charset="utf-8">
+    <title>Story-Knopf</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #010101;
+        font-size: 1.3em;
+        overflow: hidden;
+      }
+      
+      /* Border als Pseudo-Element auf Body */
+      body {
+        position: relative;
+        box-sizing: border-box;
+      }
 
-  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-
-<head>
-<meta charset="utf-8">
-<title>Story-Knopf</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-
-
-html,body{margin:0;height:100%;font-family:Arial,Helvetica,sans-serif;background: #010101;;font-size:1.3em;overflow:hidden}
-*{cursor:default !important}
-
-
-::-webkit-scrollbar {
-    display: none;
+      body::before {
+  border: 20px solid rgba(255, 106, 0, 0.3); /* Orange mit Transparenz */
+  /* oder */
+  border: 20px solid #333; /* Dunkelgrau */
 }
+      
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 20px solid #ccc;
+        pointer-events: none; /* Klicks gehen durch */
+        z-index: 10000; /* Über allem */
+        box-sizing: border-box;
+      }
+      
+      * {
+        cursor: default !important;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
 
 /* ---------- Würfel-Knopf ---------- */
 #bubble{position:fixed;right:20px;bottom:70px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#ff8a00 0%,#ff6600 100%);box-shadow:0 4px 12px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:9999}
@@ -4317,4 +4347,5 @@ bubble.onclick = () => {
 </script>
 </body>
 </html>
+
 
