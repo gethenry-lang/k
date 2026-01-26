@@ -11,7 +11,7 @@
 
 
 
-html,body{margin:30;height:100%;font-family:Arial,Helvetica,sans-serif; font-size:1.5em; ;background: #ffffff; overflow:hidden}
+html,body{margin:30;height:100%;font-family:Arial,Helvetica,sans-serif; font-size:1.3em; ;background: #ffffff; overflow:hidden}
 *{cursor:default !important}
 
 
@@ -27,17 +27,25 @@ html,body{margin:30;height:100%;font-family:Arial,Helvetica,sans-serif; font-siz
 .front{transform:translateZ(15px)}.back{transform:translateZ(-15px) rotateY(180deg)}.left{transform:translateX(-15px) rotateY(-90deg)}.right{transform:translateX(15px) rotateY(90deg)}.top{transform:translateY(-15px) rotateX(90deg)}.bottom{transform:translateY(15px) rotateX(-90deg)}
 
 /* ---------- Story-Karte ---------- */
-#card{position:fixed;left:45%;top:48%;transform:translate(-50%,-50%);background:#ffffff;padding:25px 30px;box-shadow:0 6px 24px rgba(246, 245, 245, 0);border-radius:8px;width:75vw;max-height:125vh;overflow-y:auto;display:none;z-index:200; color: #000000;bottom: -45%;}
+#card{position:fixed;left:45%;top:48%;transform:translate(-50%,-50%);background:#ffffff;padding:25px 30px;box-shadow:0 6px 24px rgba(246, 245, 245, 0);border-radius:8px;width:75vw;max-height:120vh;overflow-y:auto;display:none;z-index:200; color: #000000;bottom: -40%;}
 #card h1{margin-top:0; color: #e0e0e0;}
-.close{float:right;border:none;background:none;font-size:18px;line-height:1;cursor:pointer;}
+.close{float:right;border:none;background:none;font-size:15px;line-height:1;cursor:pointer;}
 
 /* ---------- VOKABELN ---------- */
 .voc{margin-top:60px;display:flex;flex-direction:column;gap:22px}   /* Abstand zwischen Blöcken */
 .word-group{display:flex;flex-direction:column;gap:4px}            /* untereinander */
-.word{position:relative;padding-left:32px;font-size:36px;line-height:1.2;}
+.word{position:relative;padding-left:32px;font-size:24px;line-height:1.2;}
 .word.de::before{content:"🇩🇪";position:absolute;left:0;top:0}
 .word.vi::before{content:"🇬🇧";position:absolute;left:0;top:0}
 .word.en::before{content:"vn";position:absolute;left:0;top:0}
+
+
+
+#title {margin-top:200px;
+        display:flex;
+
+}
+
 </style>
 </head>
 <body>
@@ -52,7 +60,7 @@ html,body{margin:30;height:100%;font-family:Arial,Helvetica,sans-serif; font-siz
 
 <div id="card">
   <button class="close" onclick="card.style.display='none'">&times;</button>
-  <h2 id="title"></h2>
+  <h4 id="title"></h4>
   <p id="story"></p>
   <div class="voc" id="vocbody"></div>
 </div>
@@ -61,7 +69,7 @@ html,body{margin:30;height:100%;font-family:Arial,Helvetica,sans-serif; font-siz
   /* --------------  DATENBANK (einfach erweitern)  -------------- */
 const stories = [
   
-,
+
 {
   "title": "☕ Das Telefon klingelt im Büro 📞",
   "text": "Herr Meier arbeitet in einem großen Büro. Er schreibt gerade eine wichtige E-Mail. Plötzlich klingelt das Telefon laut. Herr Meier nimmt den Hörer ab. Es ist eine Kundin am Apparat. Sie hat eine Frage zu einem Produkt. Herr Meier erklärt ihr die Details ruhig und freundlich. Er notiert ihre Adresse. Dann verabschiedet er sich. Er macht eine kurze Pause und trinkt einen Kaffee.",
@@ -4338,6 +4346,7 @@ document.addEventListener('touchend', function(event) {
 </script>
 </body>
 </html>
+
 
 
 
